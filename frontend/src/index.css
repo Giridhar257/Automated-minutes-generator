@@ -1,0 +1,128 @@
+:root {
+  --primary: #646cff;
+  --primary-hover: #4e54e2;
+  --bg-dark: #1e1e2f;
+  --bg-light: #f5f7fa;
+  --text-dark: #2d2d2d;
+  --text-light: #ffffff;
+  --card-bg-dark: #2a2a40;
+  --card-bg-light: #ffffff;
+
+  font-family: "Inter", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--text-light);
+  background-color: var(--bg-dark);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem;
+  background: linear-gradient(135deg, #1f1f2e, #2e2e3f);
+}
+
+h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  text-align: center;
+  font-weight: 700;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  background: var(--card-bg-dark);
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  margin-top: 1.5rem;
+}
+
+label {
+  display: block;
+  margin: 1rem 0 0.5rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #444;
+  background: #2e2e3f;
+  color: #fff;
+  font-size: 1rem;
+}
+
+button {
+  margin-top: 1.2rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+.card {
+  background: #33334d;
+  padding: 1.5rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+}
+
+.card h2 {
+  margin-top: 0;
+  color: var(--primary);
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: var(--text-dark);
+    background-color: var(--bg-light);
+  }
+  body {
+    background: linear-gradient(135deg, #f0f2f5, #ffffff);
+  }
+  .container {
+    background: var(--card-bg-light);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  input[type="text"],
+  input[type="file"] {
+    background: #fff;
+    border: 1px solid #ccc;
+    color: #000;
+  }
+  .card {
+    background: #f9f9f9;
+  }
+}

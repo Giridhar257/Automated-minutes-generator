@@ -1,0 +1,37 @@
+# =======================
+# Python general ignores
+# =======================
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# =======================
+# Virtual environments
+# =======================
+env/
+venv/
+.venv/
+ammg_env/
+AMMG/ammg_env/
+AMMG/backend/env/
+
+# =======================
+# IDE / Editor files
+# =======================
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# =======================
+# OS-generated files
+# =======================
+.DS_Store
+Thumbs.db
