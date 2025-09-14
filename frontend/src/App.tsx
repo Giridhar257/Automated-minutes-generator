@@ -143,7 +143,7 @@ function App() {
     try {
       setLoading(true);
       setGeneratedData(null);
-      const BACKEND_URL = import.meta.env.VITE_BACKEND_URL;
+      const BACKEND_URL = import.meta.env.VITE_BACKEND_URL as string;
       const response = await fetch(`${BACKEND_URL}/generate-minutes/`, {
         method: "POST",
         body: formData,
