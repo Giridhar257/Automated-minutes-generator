@@ -61,7 +61,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-@app.post("/generate-minutes")
+@app.post("/generate-minutes/")
 async def generate_minutes(
     file: UploadFile = File(...),
     participants: str = Form(""),
