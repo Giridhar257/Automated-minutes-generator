@@ -47,10 +47,15 @@ from generator import (
 
 app = FastAPI()
 
+
+origins = [
+    "https://your-vercel-frontend.vercel.app",  # replace with your actual Vercel URL
+    "http://localhost:3000",  # optional for local testing
+]
 # Allow React frontend to connect
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # ⚠️ replace with your frontend URL (e.g. http://localhost:3000) in production
+    allow_origins=origins,  # ⚠️ replace with your frontend URL (e.g. http://localhost:3000) in production
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],

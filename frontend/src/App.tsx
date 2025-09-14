@@ -143,8 +143,8 @@ function App() {
     try {
       setLoading(true);
       setGeneratedData(null);
-
-      const response = await fetch("http://127.0.0.1:8000/generate-minutes/", {
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${BACKEND_URL}/generate-minutes/`, {
         method: "POST",
         body: formData,
       });

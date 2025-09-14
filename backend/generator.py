@@ -5,9 +5,16 @@ import spacy
 from pydub import AudioSegment
 import whisper
 from transformers import pipeline
+import subprocess   
+import sys
 
 # Load spaCy
-nlp = spacy.load("en_core_web_sm")
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    # Install the model if missing
+    subprocess.check_call([sys.executable, "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
 
 # ---------- File Readers ----------
 def read_txt(file_path):
