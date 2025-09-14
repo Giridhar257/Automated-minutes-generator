@@ -49,7 +49,7 @@ app = FastAPI()
 
 
 origins = [
-    "https://automated-minutes-generator-4.vercel.app",
+    "https://automated-minutes-generator-5.vercel.app",
     "http://localhost:3000",  # optional for local testing
 ]
 # Allow React frontend to connect
