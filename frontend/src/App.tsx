@@ -143,7 +143,7 @@ function App() {
     try {
       setLoading(true);
       setGeneratedData(null);
-      const BACKEND_URL = "https://automated-minutes-generator-4.onrender.com";
+      const BACKEND_URL = "https://automated-minutes-generator-vt8w.onrender.com";
       const response = await fetch(`${BACKEND_URL}/generate-minutes/`, {
         method: "POST",
         body: formData,
